@@ -15,15 +15,15 @@ const times = {
   dinner: 3
 }
 
-Promise.all([1, 2, 3, 4].map(n => new Cafe(times.afternoon, `0${n}`, n).get()))
-  .catch(console.error)
+Promise.all(process.argv.slice(2).map(n => new Cafe(times.afternoon, n).get()))
+  .catch(debug)
   .then(getTemplates)
-  .catch(console.error)
+  .catch(debug)
   .then(captureHtmls)
-  .catch(console.error)
+  .catch(debug)
   .then(trimmingCaptures)
-  .catch(console.error)
+  .catch(debug)
   .then(uploadScreenshots)
-  .catch(console.error)
+  .catch(debug)
   .then(post2twitter)
-  .catch(console.error)
+  .catch(debug)

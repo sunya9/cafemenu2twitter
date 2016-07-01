@@ -6,10 +6,10 @@ const Template = require('./lib/Template')
 
 const app = new Koa()
 
-function* fetch(id) {
-  this.body = yield new Cafe(2, `0${id}`, id)
-  .get()
-  .then(cafe => new Template(cafe).getTemplate())
+function * fetch (id) {
+  this.body = yield new Cafe(2, id)
+    .get()
+    .then(cafe => new Template(cafe).getTemplate())
 }
 
 app.use(route.get('/:id', fetch))

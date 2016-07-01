@@ -1,0 +1,14 @@
+{
+    "extends": "standard",
+    "plugins": [
+        "standard"
+    ],
+    "env": {
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "rules": {
+      "comma-dangle": 0
+    }
+}
