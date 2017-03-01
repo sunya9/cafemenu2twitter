@@ -1,5 +1,6 @@
 const Cafe = require('./lib/Cafe')
 const debug = require('debug')('cafemenu2twitter')
+require('dotenv').config()
 
 const {
   getTemplates,

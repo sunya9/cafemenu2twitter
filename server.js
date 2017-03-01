@@ -1,5 +1,6 @@
 const Koa = require('koa')
 const route = require('koa-route')
+require('dotenv').config()
 
 const Cafe = require('./lib/Cafe')
 const Template = require('./lib/Template')
