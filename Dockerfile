@@ -1,4 +1,4 @@
-FROM node:boron-slim
+FROM edvakf/phantomjs-japanese
 
 # Create app directory
 RUN mkdir -p /usr/src/app
