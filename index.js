@@ -18,15 +18,10 @@ const times = {
 }
 cron.schedule('0 11 * * 1-6', () => {
   Promise.all('1234'.split('').map(n => new Cafe(times.afternoon, n).get()))
-    .catch(debug)
     .then(getTemplates)
-    .catch(debug)
     .then(captureHtmls)
-    .catch(debug)
     .then(trimmingCaptures)
-    .catch(debug)
     .then(uploadScreenshots)
-    .catch(debug)
     .then(post2twitter)
     .catch(debug)
 })
