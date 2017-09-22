@@ -7,8 +7,8 @@ const Template = require('./lib/Template')
 
 const app = new Koa()
 
-function * fetch (id) {
-  this.body = yield new Cafe(2, id)
+async function fetch(ctx, id) {
+  ctx.body = await new Cafe(2, id)
     .get()
     .then(cafe => new Template(cafe).getTemplate())
 }
